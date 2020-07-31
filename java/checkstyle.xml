@@ -45,8 +45,9 @@ Note: this has been modified slightly to not enforce silly things the Google Sty
   <module name="FileTabCharacter">
     <property name="eachLine" value="true"/>
   </module>
-
+  <module name="SuppressWarningsFilter" />
   <module name="TreeWalker">
+    <module name="SuppressWarningsHolder" />
     <module name="OuterTypeFilename"/>
     <module name="IllegalTokenText">
       <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
