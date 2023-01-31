@@ -268,7 +268,12 @@
     </module>
     <module name="NoWhitespaceBeforeCaseDefaultColon"/>
     <module name="OverloadMethodsDeclarationOrder"/>
+    <!--
+    Disabled.  It's okay to extract various parts of a loop's key at the start
+    of the body and not use some of them until later on.
+
     <module name="VariableDeclarationUsageDistance"/>
+    -->
     <module name="CustomImportOrder">
       <property name="sortImportsInGroupAlphabetically" value="true"/>
       <property name="separateLineBetweenGroups" value="true"/>
@@ -330,14 +335,14 @@
       <property name="accessModifiers" value="public"/>
       <property name="allowMissingParamTags" value="true"/>
       <property name="allowMissingReturnTag" value="true"/>
-      <property name="allowedAnnotations" value="Override, Test"/>
+      <property name="allowedAnnotations" value="Override, Test, Bean"/>
       <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF, COMPACT_CTOR_DEF"/>
     </module>
     <module name="MissingJavadocMethod">
       <property name="scope" value="public"/>
       <property name="minLineCount" value="2"/>
-      <property name="allowedAnnotations" value="Override, Test"/>
-      <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF,
+      <property name="allowedAnnotations" value="Override, Test, Bean"/>
+      <property name="tokens" value="METHOD_DEF, ANNOTATION_FIELD_DEF,
                                    COMPACT_CTOR_DEF"/>
     </module>
     <module name="MissingJavadocType">
